@@ -5,34 +5,171 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="./src/style.css">
   <title>Invoice App</title>
 </head>
 
-<body>
+<body class="bg-gray-50 dark:bg-neutral-900 text-gray-800 dark:text-neutral-200">
 
 
   <main id="app" class=" flex flex-col h-screen">
-    <header class="bg-green-400 font-bold">
-      <div class="container mx-auto px-4 ">
-         <div class="py-4">
-        <h1 class="text-2xl ">ECC Invoice App</h1>
+    <header class=" font-bold">
+      <div class="container mx-auto px-40 ">
+        <div class="py-4">
+          <h1 class="text-6xl ">ECC </h1>
+          <p class="text-lg text-gray-600">Invoice app for shop & Your trusted invoice management solution</p>
 
-         </div>
         </div>
+      </div>
     </header>
 
     <section>
-      <div class="container mx-auto">
-        <h1 class="text-xl text-gray-800 bg-blue-400 font-semibold">Body</h1>
+      <div class="container mx-auto px-40">
+        <form action="">
+          <div class="grid grid-cols-4 gap-4 border border-gray-200 dark:border-neutral-700 rounded-lg p-4 mb-6 ">
+            <div class="col-span-2">
+              <label for="hs-select-label" class="block  text-sm font-medium text-foreground">Label</label>
+              <select
+                class="py-3 px-4 pe-9 block w-full bg-gray-100 dark:bg-neutral-700 border-transparent rounded-lg text-sm text-gray-800 dark:text-neutral-200 focus:border-blue-700 dark:focus:border-blue-600 focus:ring-blue-700 dark:focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none">
+                <option selected>Select an option</option>
+                <option>Apple</option>
+                <option>Orange</option>
+                <option>Banana</option>
+              </select>
+            </div>
+
+            <div class="col-span-1">
+              <div class="max-w-sm w-full">
+                <label for="input-base" class="block text-sm font-medium">Quantity</label>
+                <input id="input-base" type="text"
+                  class="py-2.5 sm:py-3 px-4 rounded-lg block w-full bg-white dark:bg-neutral-800 border-gray-200 dark:border-neutral-700 sm:text-sm text-gray-800 dark:text-neutral-200 placeholder:text-gray-500 dark:placeholder:text-neutral-400 focus:border-blue-700 dark:focus:border-blue-600 focus:ring-blue-700 dark:focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="Quantity">
+              </div>
+            </div>
+
+            <div class="col-span-1">
+              <button type="button"
+                class="py-3 h-full px-4 inline-flex items-center w-full  text-sm font-medium rounded-lg border border-gray-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-gray-800 dark:text-white shadow-2xs hover:bg-gray-50 dark:hover:bg-neutral-700 focus:outline-hidden focus:bg-gray-50 dark:focus:bg-neutral-700 disabled:opacity-50 disabled:pointer-events-none">
+                Add Record
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+      <div class="container mx-auto px-40">
+        <!-- Table -->
+        <div class="min-w-full">
+          <div
+            class="overflow-x-auto [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-none [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
+            <table class="min-w-full divide-y border border-gray-200 dark:border-neutral-700">
+              <thead>
+                <tr>
+                  <th scope="col"
+                    class="px-6 py-3 text-start text-xs font-medium text-gray-500 dark:text-neutral-400 uppercase">Product Name
+                  </th>
+                  <th scope="col"
+                    class="px-6 py-3 text-start text-xs font-medium text-gray-500 dark:text-neutral-400 uppercase">Price
+                  </th>
+                  <th scope="col"
+                    class="px-6 py-3 text-start text-xs font-medium text-gray-500 dark:text-neutral-400 uppercase">
+                    Quantity</th>
+                  <th scope="col"
+                    class="px-6 py-3 text-end text-xs font-medium text-gray-500 dark:text-neutral-400 uppercase">Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+                <tr class="hover:bg-gray-100 dark:hover:bg-neutral-700">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">John
+                    Brown</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">45</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">New York No. 1
+                    Lake Park</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                    <button type="button"
+                      class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-600 focus:outline-hidden focus:text-blue-700 dark:focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-gray-100 dark:hover:bg-neutral-700">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">Jim
+                    Green</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">27</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">London No. 1 Lake
+                    Park</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                    <button type="button"
+                      class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-600 focus:outline-hidden focus:text-blue-700 dark:focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-gray-100 dark:hover:bg-neutral-700">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">Joe
+                    Black</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">31</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">Sidney No. 1 Lake
+                    Park</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                    <button type="button"
+                      class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-600 focus:outline-hidden focus:text-blue-700 dark:focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-gray-100 dark:hover:bg-neutral-700">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">Edward
+                    King</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">16</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">LA No. 1 Lake Park
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                    <button type="button"
+                      class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-600 focus:outline-hidden focus:text-blue-700 dark:focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-gray-100 dark:hover:bg-neutral-700">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">Jim
+                    Red</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">45</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">Melbourne No. 1
+                    Lake Park</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                    <button type="button"
+                      class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-600 focus:outline-hidden focus:text-blue-700 dark:focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- End Table -->
       </div>
     </section>
 
 
-    <footer class="text-center mt-auto">
-      <div class="container mx-auto">
-        <p class="text-sm font-bold bg-green-400">&copy; 2023 Invoice App. All rights reserved.</p>
+    <footer class=" mt-auto">
+      <div class="container mx-auto px-40 ">
+
+        <!-- Button Group -->
+        <div class="flex justify-end gap-x-2  mb-9">
+
+          <button type="button"
+            class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 dark:border-neutral-700 text-gray-500 dark:text-neutral-400 hover:border-blue-700 dark:hover:border-blue-600 hover:text-blue-700 dark:hover:text-blue-600 focus:outline-hidden focus:border-blue-700 dark:focus:border-blue-600 focus:text-blue-700 dark:focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none">
+            Manage Inventory
+          </button>
+
+          <button type="button"
+            class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-gray-800 dark:text-white shadow-2xs hover:bg-gray-50 dark:hover:bg-neutral-700 focus:outline-hidden focus:bg-gray-50 dark:focus:bg-neutral-700 disabled:opacity-50 disabled:pointer-events-none">
+            Print Invoice
+          </button>
+
+        </div>
+        <!-- End Button Group -->
       </div>
+
+      <p class="text-sm text-center font-bold mb-4">&copy; 2023 Invoice App. All rights reserved.</p>
     </footer>
 
   </main>
